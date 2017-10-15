@@ -2,6 +2,7 @@
     "version": "1.0.0",
     "summary": "helpful summary of your project, less than 80 characters",
     "repository": "https://github.com/gentom/gentom.github.io.git",
+    "homepage": "https://gentom.tech/public/index.html",
     "license": "BSD3",
     "source-directories": [
         "src"
