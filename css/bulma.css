@@ -147,11 +147,22 @@ pre {
   font-family: monospace;
 }
 
+@font-face {
+	font-family: 'Makinas';
+	src: url(./../fonts/Makinas/Makinas.otf);
+}
+
+@font-face {
+  font-family: 'PS2', cursive;
+  src: url(./../fonts/PS2/PS2.ttf)
+}
+
 body {
   color: #4a4a4a;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  font-family: 'Makinas';
 }
 
 a {
