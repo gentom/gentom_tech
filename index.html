@@ -75,8 +75,10 @@
           background-color: #23dfcf;
         }
     </style>
+
+    
   </head>
-  <body>
+<body>
     <!--
     <div id="elm-app"></div>
     <script src="elm.js"></script>
@@ -134,33 +136,28 @@
         </div>
     </section>
 
-    <section class="section section-3 hero is-fullheight">
-      <div class="hero-body">
-        <div class="container">
-          <div class="card github">
-                <div class="card-content">
-                  <p class="title is-4 contsTi">
-                    Github
-                  </p>
-                  <p class="content conts" align="center" style="font-size:3rem;">
-                    <a href="https://github.com/gentom" style="color:#fff799;">gentom@github</a></li>
-                  </p>
-                </div>
-
-                <!-- Prepare a container for your calendar. -->
-                <div class="calendar">
-                  <!-- Loading stuff -->
-                  Loading the data just for you.
-                </div>
-
-                <script>
-                  new GitHubCalendar(".calendar", "gentom");
-                </script>
-
+    <section class="section section-3 hero is-fullheight" id="disp">
+        <div class="hero-body">
+          <div class="container">
+            <div class="card github">
+                  <div class="card-content">
+                    <p class="title is-4 contsTi">
+                      Github
+                    </p>
+                    <p class="content conts" align="center" style="font-size:3rem;">
+                      <a href="https://github.com/gentom" style="color:#fff799;">gentom@github</a></li>
+                    </p>
+                  </div>
+                  
+                  <!-- Prepare a container for your calendar. -->
+                  <div id="gitcon"></div>
+  
+            </div>
           </div>
         </div>
-      </div>
-  </section>
+    </section>
+    
+  
 
     <section class="section section-3 hero is-fullheight">
         <div class="hero-body">
@@ -230,6 +227,20 @@
        easing: 'easeOut',
        scrollingSpeed: 1000
      });
+    </script>
+    <!-- github calender -->
+    <script type="text/javascript">
+      if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+          
+        } else {
+          var div_element = document.createElement("div");
+          div_element.innerHTML = '<div class="calendar"></div>';
+          var parent_object = document.getElementById("gitcon");
+          parent_object.appendChild(div_element);
+        }
+    </script>
+    <script>
+        new GitHubCalendar(".calendar", "gentom");
     </script>
   </body>
 </html>
